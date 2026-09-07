@@ -27,7 +27,7 @@ import org.springframework.stereotype.Component;
 public class ArithmeticPresentationLayer {
     @Autowired
     private Adder adder;
-    
+
     private Multiplier multiplier;
     private Squarer squarer;
     @Autowired
@@ -63,7 +63,6 @@ public class ArithmeticPresentationLayer {
     public String multiplyConvertToString(double a, double b){
         return String.format("The result of %.1f * %.1f is %.1f", a, b, multiplier.multiply(a,b));
     }
-
     /**
      * @param a - number 1
      * @return the square operation as a String, see tests for specific formatting
