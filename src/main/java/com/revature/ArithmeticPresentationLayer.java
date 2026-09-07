@@ -27,7 +27,9 @@ import org.springframework.stereotype.Component;
 public class ArithmeticPresentationLayer {
     @Autowired
     private Adder adder;
+    @Autowired
     private Multiplier multiplier;
+    @Autowired
     private Squarer squarer;
     @Autowired
     public void setMultiplier(Multiplier multiplier) {
@@ -46,12 +48,12 @@ public class ArithmeticPresentationLayer {
         // Retrieve the RoryApplication bean from the container
         ArithmeticPresentationLayer app = context.getBean(ArithmeticPresentationLayer.class);
     }
-    @Autowired
     /**
      * @param a - number 1
      * @param b - number 2
      * @return the addition operation as a String, see tests for specific formatting
      */
+    @Autowired
     public String addConvertToString(double a, double b){
         return String.format("The result of %.1f + %.1f is %.1f", a, b, adder.add(a,b));
     }
@@ -60,6 +62,7 @@ public class ArithmeticPresentationLayer {
      * @param b - number 2
      * @return the multiplication operation as a String, see tests for specific formatting
      */
+    @Autowired
     public String multiplyConvertToString(double a, double b){
         return String.format("The result of %.1f * %.1f is %.1f", a, b, multiplier.multiply(a,b));
     }
@@ -68,6 +71,7 @@ public class ArithmeticPresentationLayer {
      * @param a - number 1
      * @return the square operation as a String, see tests for specific formatting
      */
+    @Autowired
     public String squareConvertToString(double a){
         return String.format("The result of %.1f squared is %.1f", a, squarer.getSquare(a));
     }
