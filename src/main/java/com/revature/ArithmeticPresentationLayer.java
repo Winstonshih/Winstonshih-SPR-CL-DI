@@ -46,7 +46,7 @@ public class ArithmeticPresentationLayer {
         // Retrieve the RoryApplication bean from the container
         ArithmeticPresentationLayer app = context.getBean(ArithmeticPresentationLayer.class);
     }
-
+    @Autowired
     /**
      * @param a - number 1
      * @param b - number 2
